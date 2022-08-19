@@ -1,39 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
-import TodoList from "./Todolist";
 
-const Hello = (props) => {
-  return (
-    <div>
-      <p>
-        Hello {props.name} ! You are {props.age} years old
-      </p>
-    </div>
-  );
-};
-
-const Header = (props) => {
-  console.log(props);
-  const { course } = props;
-  return <h1>{course.name}</h1>;
-};
-
-const Content = (props) => {
-  console.log(props);
-  const { course } = props;
-
-  return (
-    <div>
-      {course.parts.map((part) => {
-        return (
-          <div key={part.name}>
-            <p>{part.name}</p>
-          </div>
-        );
-      })}
-    </div>
-  );
-};
+import { TodoList } from "./TodoList";
+import { Header, Content, Hello } from "./components";
 
 const App = () => {
   console.log("hello world");
